@@ -1,6 +1,0 @@
-{
-    "imports": {
-        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-        "@sravan-org/root-config": "//localhost:9000/sravan-org-root-config.js"
-    }
-}

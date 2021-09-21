@@ -36,6 +36,10 @@
   <script type="systemjs-importmap">
     {
       "imports": {
+        "react": "https://cdn.jsdelivr.net/npm/react@16.13.0/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.0/umd/react-dom.production.min.js",
+        "rxjs": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs/system/rxjs.min.js",
+        "rxjs/operators": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs/system/rxjs-operators.min.js",
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
       }
     }
@@ -46,7 +50,15 @@
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
 
   <% if (isLocal) { %>
-    <script type="systemjs-importmap" src="../local-maps.json"></script>
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "@sravan-org/app-react": "//localhost:8080/sravan-org-app-react.js",
+          "@sravan-org/root-config": "//localhost:9000/sravan-org-root-config.js",
+          "@sravan-org/single-spa-util-module-vanilla":"//http://localhost:8081/sravan-org-single-spa-util-module-vanilla.js"
+        }
+      }
+    </script>
     <% } %>
 
       <!--
